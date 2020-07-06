@@ -1,8 +1,6 @@
-<img src="https://avatars1.githubusercontent.com/u/3846050?v=4&s=200" width="127px" height="127px" align="left"/>
 
 # Git Style Guide
 
-Git style guide suggested by Pagar.me. 
 
 <br>
 
@@ -72,23 +70,30 @@ Git style guide suggested by Pagar.me.
   - [3.2](#) A commit message consists of three distinct parts separated by a blank line: the title, an optional body and an optional footer. The layout looks like this:
 
     ```
-    context: subject
+    type: subject
 
     body
 
     footer
     ```
 
-    - **Title:** consists of the context of the message and subject.
-    - **Context:** the part of the of the application that is being changed.
-    - **Subject:** what is being changed. Subjects should be no greater than 50 characters, should begin with a minuscule letter and not end with a period. Use an imperative tone to describe what a commit does, rather than what it did. For example, use change; not changed or changes.
+    - **Title:** consists of the type of the message and subject.
+    - **Type:** The type is contained within the title and can be one of these types:
+      - ***fix: a bug fix***
+      - ***docs: changes to documentation***
+      - ***style: formatting, missing semi colons, etc; no code change***
+      - ***refactor: refactoring production code***
+      - ***test: adding tests, refactoring test; no production code change***
+      - ***chore: updating build tasks, package manager configs, etc; no production code change***
+      - ***feat: a new feature*** 
+     - **Subject:** what is being changed. Subjects should be no greater than 50 characters, should begin with a minuscule letter and not end with a period. Use an imperative tone to describe what a commit does, rather than what it did. For example, use change; not changed or changes.
     - **Body:** use the body to explain the what and why of a commit, not the how. When writing a body, the blank line between the title and the body is required and you should limit the length of each line to no more than 72 characters. Ultimately, when writing a commit message, think about what you would need to know if you run across the commit in a year from now.
     - **Footer:** the footer is optional and is used to reference issue tracker IDs.
 
     Example commit message:
 
     ```
-    core: summarize changes in around 50 characters or less
+    feat: summarize changes in around 50 characters or less
 
     More detailed explanatory text, if necessary. Wrap it to about 72
     characters or so. In some contexts, the first line is treated as the
@@ -143,3 +148,8 @@ Git style guide suggested by Pagar.me.
 ## Need Help ?
 
 If you are not familiar with git commands or need help to accomplish the style guide, check [k88hudson/git-flight-rules](https://github.com/k88hudson/git-flight-rules) for some usage tips and walkthrough.
+
+sources: 
+  * Git style guide suggested by Pagar.me. 
+  * Git style guide suggested by Udacity
+
