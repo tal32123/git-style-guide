@@ -29,7 +29,26 @@
     # bad
     $ git checkout -b feature/add_webhook
     ```
+  - [1.3](#) Use Git Flow Branch conventions
+    * master 
+       * The production branch
+       * The master branch stores the official release history
+    * develop
+       * The develop branch is where most of the development work occurs.
+       * the develop branch serves as an integration branch for features
+    * feature/
+       * Each new feature should reside in its own branch
+       * feature branches use develop as their parent branch
+    * release/
+       * Branch for release cycles
+       * Once develop has acquired enough features for a release (or a predetermined release date is approaching), you fork a release branch off of develop.
+       * Using a dedicated branch to prepare releases makes it possible for one team to polish the current release while another team continues working on features for the next release.
+    * hotfix/
+       * The hotfix branch is used when you have a bug on a master branch that you know you can fix quickly.
+       * based on master branch
 
+
+   
 ## Commits
 
   - [2.1](#) Each commit should represent a single logical change.
@@ -152,4 +171,6 @@ If you are not familiar with git commands or need help to accomplish the style g
 sources: 
   * Git style guide suggested by Pagar.me. 
   * Git style guide suggested by Udacity
+  * https://zellwk.com/blog/git-flow/
+  * https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
 
